@@ -1,6 +1,6 @@
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // Enable dark mode using the 'class' strategy
   theme: {
     extend: {},
   },
