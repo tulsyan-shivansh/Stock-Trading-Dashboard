@@ -3,12 +3,12 @@
 @import "tailwindcss/utilities";
 
 body {
-    background-color: #f7fafc; /* bg-gray-100 */
-    color: #1a202c; /* text-gray-900 */
+  background-color: #f7fafc; /* bg-gray-100 */
+  color: #1a202c; /* text-gray-900 */
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a202c; /* dark:bg-gray-900 */
+    color: #f7fafc; /* dark:text-gray-100 */
   }
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: #1a202c; /* dark:bg-gray-900 */
-      color: #f7fafc; /* dark:text-gray-100 */
-    }
-  }
+}

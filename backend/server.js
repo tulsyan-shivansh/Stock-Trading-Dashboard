@@ -46,9 +46,13 @@ io.on("connection", (socket) => {
 
 // Example route to fetch stock data
 app.get("/api/stock/:symbol", async (req, res) => {
+  const { symbol } = req.params;
+  if (!symbol) {
+    return res.status(400).json({ error: "Symbol is required" });
+  }
+
   try {
-    const symbol = req.params.symbol;
-    const data = await fetchStockData(symbol);
+    const { data } = await fetchStockData(symbol);
     res.json(data);
   } catch (error) {
     console.error("Error fetching stock data:", error);
